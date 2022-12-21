@@ -30,7 +30,13 @@
         @click="drawer = !drawer"
         class="hidden-md-and-up"
       ></v-app-bar-nav-icon>
-      <v-toolbar-title>Adv application</v-toolbar-title>
+      <v-toolbar-title>
+        <router-link
+          to="/"
+          tag="span"
+          class="pointer"
+        >Anime JDM</router-link>
+      </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
         <v-btn
@@ -68,6 +74,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+  .pointer{
+    cursor: pointer;
+  }
 </style>
