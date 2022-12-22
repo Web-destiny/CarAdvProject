@@ -2,7 +2,7 @@
   <v-container>
     <v-layout row>
       <v-flex xs12 sm6 offset-sm-3 pt-10>
-        <h1 class="text--secondary mb-3">Orders</h1>
+        <h1 class="text--secondary pb-3">Orders</h1>
         <v-list
           flat
           subheader
@@ -68,7 +68,4 @@ export default {
 </script>
 
 <style scoped>
-  body {
-    background-color: bisque;
-  }
 </style>
