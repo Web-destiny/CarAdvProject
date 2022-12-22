@@ -1,8 +1,36 @@
 <template>
   <v-container>
-    <v-layout row>
-      <v-flex xs12>
-        <h1>AdList</h1>
+    <v-layout row pt-10>
+      <v-flex xs12 sm6 offset-sm3>
+        <h1 class="text--secondary mb-3">My ads</h1>
+        <v-card
+          elevation="10"
+          v-for="ad in ads"
+          :key="ad.id"
+          class="mb-5"
+        >
+          <v-layout>
+            <v-flex xs4>
+              <v-img
+                :src="ad.imageSrc"
+                height="150px"
+              ></v-img>
+            </v-flex>
+            <v-flex xs8>
+              <v-card-text>
+                <h2 class="text--primary">{{ ad.title }}</h2>
+                <p>{{ ad.description}}</p>
+              </v-card-text>
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn
+                  class="info"
+                  :to="'/ad/' + ad.id"
+                >Open</v-btn>
+              </v-card-actions>
+            </v-flex>
+          </v-layout>
+        </v-card>
       </v-flex>
     </v-layout>
   </v-container>
@@ -11,7 +39,45 @@
 <script>
 export default {
   data () {
-    return {}
+    return {
+      ads: [
+        {
+          title: 'TOYOTA CRESTA',
+          description: 'This car is really amazing',
+          promo: true,
+          imageSrc: 'https://papik.pro/uploads/posts/2021-12/1640701672_25-papik-pro-p-anime-risunki-vinil-25.jpg',
+          id: '001'
+        },
+        {
+          title: 'SUBARU BRZ',
+          description: 'This car is really amazing',
+          promo: true,
+          imageSrc: 'https://i.pinimg.com/originals/b3/23/b8/b323b8783e8f0f8786b28f0688e08493.png',
+          id: '002'
+        },
+        {
+          title: 'MAZDA RX-7',
+          description: 'This car is really amazing',
+          promo: true,
+          imageSrc: 'https://i.pinimg.com/originals/e8/f6/07/e8f6076e4666138c5dee34ee9a7c1581.jpg',
+          id: '003'
+        },
+        {
+          title: 'TOYOTA MARK 2',
+          description: 'This car is really amazing',
+          promo: true,
+          imageSrc: 'https://w.wallhaven.cc/full/57/wallhaven-57zmo5.png',
+          id: '004'
+        },
+        {
+          title: 'NISSAN SILVIA S15',
+          description: 'This car is really amazing',
+          promo: true,
+          imageSrc: 'https://pibig.info/uploads/posts/2021-04/1619173161_26-pibig_info-p-anime-drift-anime-krasivo-28.jpg',
+          id: '005'
+        }
+      ]
+    }
   }
 }
 </script>

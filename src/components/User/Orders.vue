@@ -1,7 +1,7 @@
 <template>
   <v-container>
-    <v-layout row>
-      <v-flex xs12 sm6 offset-sm-3 pt-10>
+    <v-layout row pt-10>
+      <v-flex xs12 sm6 offset-sm3>
         <h1 class="text--secondary pb-3">Orders</h1>
         <v-list
           flat

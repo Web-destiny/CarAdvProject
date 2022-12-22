@@ -1,7 +1,7 @@
 <template>
   <v-container>
-    <v-layout row pt-10>
-      <v-flex xs12 sm6 offset-sm-3>
+    <v-layout pt-10>
+      <v-flex xs12 sm6 offset-sm3>
         <h1 class="text--secondary mb-3">Create new ad</h1>
         <v-form class="mb-3"
           ref="form"
